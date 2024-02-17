@@ -3,13 +3,15 @@ class Solution {
         
         //ArrayList<Integer> arr = new ArrayList<>();
         int arr[] = new int[nums.length];
-        int sum =0;
-        int curr_sum=0;
+       // int sum =0;
+       // int curr_sum=0;
         
         for(int i = 0; i < nums.length; i++){
-            sum += nums[i];
-            //arr.add(sum);
-            arr[i]=sum;
+            if(i==0){
+                arr[i]=nums[i];
+            }
+            else
+                arr[i]=arr[i-1]+nums[i];
         }
         
         // for(int i =nums.length-2; i>=0;i--){
